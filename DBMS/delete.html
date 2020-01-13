@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+	#heading{
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 60px;
+	}
+		#rad{
+		  border: 0px;
+    	  width: 24%;
+    	  height: 2em;
+	}
+
+	#lol{
+		font-size: 20px;
+	}
+
+	.cls{
+		font-size: 20px;
+	}
+
+    .tab-pane {
+        position: absolute;
+        margin-top: 30px;
+    }
+    #submitbtt{
+			margin-left: 0px;
+			height: 44px;
+			border-radius: 10px;
+			width: 80px;
+			font-family: Agency FB;
+			font-size: 30px;
+			color: black;
+			background-color: white;
+		}
+</style>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div class="container-fluid">
+	
+	 <div class="jumbotron">
+	 <h1 id="heading">DELETE</h1>
+	 
+	 </div>
+
+	 <div class="row" style="padding-left: 50px">
+    	
+	 	<nav>
+  		<div class="nav nav-tabs" id="nav-tab" role="tablist">
+    	<a class="nav-item nav-link active" id="nav-bank-tab" data-toggle="tab" href="#nav-bank" role="tab" aria-controls="nav-bank" aria-selected="true">Bank</a>&nbsp;&nbsp;
+    	<a class="nav-item nav-link" id="nav-branch-tab" data-toggle="tab" href="#nav-branch" role="tab" aria-controls="nav-branch" aria-selected="false">Branch</a>&nbsp;&nbsp;
+    	<a class="nav-item nav-link" id="nav-br_loan-tab" data-toggle="tab" href="#nav-br_loan" role="tab" aria-controls="nav-br_loan" aria-selected="false">BranchLoan</a>&nbsp;&nbsp;
+    	<a class="nav-item nav-link" id="nav-br_acc-tab" data-toggle="tab" href="#nav-br_acc" role="tab" aria-controls="nav-br_acc" aria-selected="false">BR_ACC</a>&nbsp;&nbsp;
+    	<a class="nav-item nav-link" id="nav-account-tab" data-toggle="tab" href="#nav-account" role="tab" aria-controls="nav-account" aria-selected="false">Account</a>&nbsp;&nbsp;
+    	<a class="nav-item nav-link" id="nav-LOAN-tab" data-toggle="tab" href="#nav-LOAN" role="tab" aria-controls="nav-LAON" aria-selected="false">LOAN</a>&nbsp;&nbsp;
+       <a class="nav-item nav-link" id="nav-cust-tab" data-toggle="tab" href="#nav-cust" role="tab" aria-controls="nav-cust" aria-selected="false">CUSTOMERS</a>&nbsp;&nbsp;
+       
+         
+           <a class="nav-item nav-link" id="nav-atm-tab" data-toggle="tab" href="#nav-atm" role="tab" aria-controls="nav-atm" aria-selected="false">ATM</a>
+    	</nav>
+
+    	<div class="tab-content" id="nav-tabContent">
+  			<div class="tab-pane fade show active" id="nav-bank" role="tabpanel" aria-labelledby="nav-bank-tab">
+  				<form action="delete_bank.php" method="POST">
+        		
+        			BANK NUMBER:<br/>
+        			<input type="text" name="bank_no">
+        			<br/><br/><input type="Submit" name="submit" id="submitbtt">
+      			</form>
+  			</div>
+  			<div class="tab-pane fade" id="nav-branch" role="tabpanel" aria-labelledby="nav-branch-tab">
+  				<form action="delete_branch.php" method="POST">
+        			IFSC CODE:<br/>
+  				<input type="text" name="ifsc"><br/>
+        			
+  				<br/><br/><input type="Submit" name="submit" id="submitbtt">
+				</form>
+  			</div>
+  			<div class="tab-pane fade" id="nav-br_loan" role="tabpanel" aria-labelledby="nav-br_loan-tab">
+  				 <form action="delete_br_loan.php" method="POST">
+       				 LOAN ID:<br>
+    			 <input type="text" name="lid"><br>
+        			IFSC CODE:<br>
+  				<input type="text" name="ifsc"><br>
+  				<br/><br/><input type="Submit" name="submit" id="submitbtt">
+    			 </form>
+			</div>
+			 <div class="tab-pane fade" id="nav-br_acc" role="tabpanel" aria-labelledby="nav-br_acc-tab">
+			 	
+			 	 <form action="delete_br_acc.php" method="POST">
+        			ACCOUNT NUMBER:<br>
+    			<input type="text" name="accno"><br>
+        			IFSC CODE:<br>
+  				<input type="text" name="ifsc"><br>
+  				<br/><br/><input type="Submit" name="submit" id="submitbtt">
+    			</form>
+
+			 </div>
+
+			<div class="tab-pane fade" id="nav-account" role="tabpanel" aria-labelledby="nav-account-tab">
+			
+
+				<form action="delete_account.php" method="POST">
+        		
+        			ACCOUNT NUMBER:<br>
+  				<input type="text" name="accno"><br>
+        			
+   			    <br/><br/><input type="Submit" name="submit" id="submitbtt">
+    			</form>
+			</div>
+
+			<div class="tab-pane fade" id="nav-LOAN" role="tabpanel" aria-labelledby="nav-LOAN-tab">
+       
+       <form action="delete_loan.php" method="POST">
+        LOAN ID:<br>
+    <input type="text" name="lid"><br>
+        
+
+    <br/><br/><input type="Submit" name="submit" id="submitbtt">
+    </form>
+
+   </div>
+    <div class="tab-pane fade" id="nav-cust" role="tabpanel" aria-labelledby="nav-cust-tab">
+        
+        <form action="delete_customer.php" method="POST">
+        CUSTOMER ID:<br>
+    <input type="number" name="custid"><br>
+       
+    <br/><br/><input type="Submit" name="submit" id="submitbtt">
+    </form>
+
+    </div>
+    
+   
+ 
+    <div class="tab-pane fade" id="nav-atm" role="tabpanel" aria-labelledby="nav-atm-tab">
+        
+        <form action="delete_atm.php" method="POST">
+        ATM NUMBER:<br>
+    <input type="text" name="ano"><br>
+      
+    <br/><br/><input type="Submit" name="submit" id="submitbtt">
+    </form>
+
+
+    </div>
+
+
+  		</div>
+
+
+	</div>
+
+</body>
+</html>

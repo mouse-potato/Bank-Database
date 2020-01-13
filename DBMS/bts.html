@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+	#heading{
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 60px;
+	}
+		#rad{
+		  border: 0px;
+    	  width: 24%;
+    	  height: 2em;
+	}
+
+	#lol{
+		font-size: 20px;
+	}
+
+	.cls{
+		font-size: 20px;
+	}
+
+    .tab-pane {
+        position: absolute;
+        margin-top: 30px;
+    }
+</style>
+<head>
+	<title></title>
+</head>
+<body>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  	<div class="container-fluid">
+	
+	 <div class="jumbotron">
+	 <h1 id="heading">Banking UI</h1>
+	 
+	 </div>
+
+	 <div class="row">
+	 	<div class="col-sm-3" style="background-color:lavender;">
+    		<div class="col-sm-4"></div>
+    		<div class="col-sm-6">
+                    <input type="radio" onclick="javascript:window.location.href='insert.html'; return false;"  id="rad"/>
+    		<p class="cls">Insert</p>	
+    		</div>
+    		<div class="col-sm-2"></div>
+    	</div>
+
+    	<div class="col-sm-3" style="background-color:lavenderblush;">
+    		<div class="col-sm-4"></div>
+    		<div class="col-sm-8">
+    			 <input type="radio" onclick="javascript:window.location.href='select.html'; return false;"  id="rad"/>
+    		<p class="cls">Select</p>	
+    		</div>
+    		
+		</div>
+
+		<div class="col-sm-3" style="background-color:lavender;">
+    		<div class="col-sm-4"></div>
+    		<div class="col-sm-8">
+    			 <input type="radio" onclick="javascript:window.location.href='delete.html'; return false;"  id="rad"/>
+    		<p class="cls">Delete</p>	
+    		</div>
+    		
+		</div>
+
+		<div class="col-sm-3" style="background-color:lavenderblush;">
+    		<div class="col-sm-4"></div>
+    		<div class="col-sm-8">
+    			 <input type="radio" onclick="javascript:window.location.href='update.html'; return false;"  id="rad"/>
+    		<p class="cls">Update</p>	
+    		</div>
+    		
+		</div>
+
+
+	 </div>
+
+</body>
+</html>

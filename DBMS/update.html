@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+	#heading{
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 60px;
+	}
+		#rad{
+		  border: 0px;
+    	  width: 24%;
+    	  height: 2em;
+	}
+
+	#lol{
+		font-size: 20px;
+	}
+
+	.cls{
+		font-size: 20px;
+	}
+
+    .tab-pane {
+        position: absolute;
+        margin-top: 30px;
+    }
+    #submitbtt{
+			margin-left: 0px;
+			height: 44px;
+			border-radius: 10px;
+			width: 80px;
+			font-family: Agency FB;
+			font-size: 30px;
+			color: black;
+			background-color: white;
+		}
+</style>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div class="container-fluid">
+	
+	 <div class="jumbotron">
+	 <h1 id="heading">UPDATE</h1>
+	 
+	 </div>
+
+	 <div class="row" style="padding-left: 50px">
+    	
+	 	<nav>
+  		
+        <a class="nav-item nav-link active" id="nav-tad-tab" data-toggle="tab" href="#nav-tad" role="tab" aria-controls="nav-tad" aria-selected="true">TEMP ADDRESS</a>&nbsp;&nbsp;
+         <a class="nav-item nav-link " id="nav-pad-tab" data-toggle="tab" href="#nav-pad" role="tab" aria-controls="nav-pad" aria-selected="false">PERMANENT ADDRESS</a>&nbsp;&nbsp;
+         
+    	</nav>
+
+    	<div class="tab-content" id="nav-tabContent">
+  			<div class="tab-pane fade show active" id="nav-bank" role="tabpanel" aria-labelledby="nav-bank-tab">
+  				 <form>
+        HOUSE NUMBER:<br>
+    <input type="text" name="hno"><br>
+        CITY:<br>
+  <input type="text" name="city"><br>
+        STREET:<br>
+    <input type="text" name="street"><br>
+        CUSTOMER ID:<br>
+    <input type="text" name="custid"><br>
+    <br/><br/><input type="Submit" name="submit" id="submitbtt">
+    </form>
+  			</div>
+  			
+    <div class="tab-pane fade " id="nav-tad" role="tabpanel" aria-labelledby="nav-tad-tab">
+        
+        <form action="update_tadd.php" method='POST'>
+        HOUSE NUMBER:<br>
+    <input type="text" name="hno"><br>
+        CITY:<br>
+  <input type="text" name="city"><br>
+        STREET:<br>
+    <input type="text" name="street"><br>
+        CUSTOMER ID:<br>
+    <input type="text" name="custid"><br>
+    <br/><br/><input type="Submit" name="submit" id="submitbtt">
+    </form>
+
+    </div>
+    <div class="tab-pane fade " id="nav-pad" role="tabpanel" aria-labelledby="nav-pad-tab">
+    <form action="update_padd.php" method='POST'>
+        HOUSE NUMBER:<br>
+    <input type="text" name="hno"><br>
+        CITY:<br>
+    <input type="text" name="city"><br>
+        STREET:<br>
+    <input type="text" name="street"><br>
+        CUSTOMER ID:<br>
+    <input type="text" name="custid"><br>
+    <br/><br/><input type="Submit" name="submit" id="submitbtt">
+    </form>
+    </div>
+    
+
+
+  		</div>
+
+
+	</div>
+
+</body>
+</html>
